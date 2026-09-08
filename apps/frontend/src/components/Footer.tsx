@@ -54,7 +54,7 @@ export function Footer() {
                   <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
                     <ClipboardPlus />
                   </div>
-                  <span>Tell us What you think</span>
+                  <span>Tell us what you think</span>
       </motion.a>
                 <motion.a
                   href="mailto:coachclassic@lovewithlegs.com"
@@ -87,6 +87,7 @@ export function Footer() {
                   </div>
                   <span>Douglasville, Ga</span>
                 </motion.div>
+                
                 <div>
                 <h4>Reach out on Social Media</h4>
                 <Social className="gap-4 my-4" socialMediaLink={socials} />
