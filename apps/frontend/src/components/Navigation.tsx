@@ -36,8 +36,7 @@ export function Navigation() {
           ))}
           <a href="https://lovewithlegs.square.site/" target="_blank" rel="noopener noreferrer"
             className="text-sm uppercase tracking-wider hover:text-brand text-white transition-colors"
-            >
-              Merchandise
+            >Shop
             </a>
           <motion.a
           href="/#classes"
@@ -78,7 +77,7 @@ export function Navigation() {
             <a href="https://lovewithlegs.square.site/" target="_blank" rel="noopener noreferrer"
             className="text-sm uppercase tracking-wider hover:text-brand text-white transition-colors"
             >
-              Merchandise
+              Shop
             </a>
             <button className="px-6 py-2 bg-triadic text-white font-bold uppercase tracking-wider w-full">
               Get Started!
