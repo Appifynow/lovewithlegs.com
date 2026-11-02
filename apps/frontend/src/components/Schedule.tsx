@@ -60,7 +60,7 @@ export function Schedule() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-6">
-          {classes[selectedDay as keyof typeof classes].map((session, index) => (
+          {Object.values(classes).flat().filter((session): session is typeof session => !!session).map((session, index) => (
             <motion.div
               key={`${session.time}-${session.class}`}
               initial={{ opacity: 0, x: -30 }}

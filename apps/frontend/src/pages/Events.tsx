@@ -18,17 +18,19 @@ export default function Events() {
         difficulty: number;
         ages?: string;
         video: string;
+        registrationLink: string;
     }
     const events: { [key: string]: Event } = {
         poolParty: {
             video: 'https://res.cloudinary.com/dwzatjoyv/video/upload/v1782775816/poolpumpedit_nrtvb1.mp4',
             title: "Pool Party Pump",
-            times: ['Thursdays @ 11 am'],
+            times: ['1st Saturday of month @ 11 am'],
             location: 'Boundary Waters Aquatic Center',
             description: "Dive into fitness with our Pool Party Pump! Join us every Thursday at 11 am for a refreshing aquatic workout that combines cardio, strength, and fun. Perfect for all fitness levels, this class will help you tone your muscles and boost your endurance while enjoying the water. Don't forget your swimsuit and towel!",
             fullAddress: "Boundary Waters Aquatic Center, 5000 highway 166,douglasville, GA",
             difficulty: 2,
-            ages: "18+"
+            ages: "18+",
+            registrationLink: "https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/e411fca80fdee6f46fe950c8b1088819?filter=c2VhcmNoPSZsb2NhdGlvbiU1QjE3ODA3JTVEPTEmZGF5c09mVGhlV2VlayU1QjElNUQ9MSZkYXlzT2ZUaGVXZWVrJTVCMyU1RD0x"
         },
             fitnessYoga: {
               video: 'https://res.cloudinary.com/dwzatjoyv/video/upload/v1782183938/excersie_demo_qvdxuv.mp4',
@@ -38,9 +40,24 @@ export default function Events() {
                 description: "Experience the perfect blend of breath, sweat, and stretch with our Breath Sweat Stretch class! Join us every Tuesday and Thursday at 9 am for a dynamic workout that combines invigorating cardio, strength training, and deep stretching. This class is designed to boost your energy, improve flexibility, and leave you feeling refreshed. All fitness levels are welcome, so come ready to move and unwind!",
                 fullAddress: "Boundary Fitness Center, 5000 highway 166, douglasville, GA",
                 difficulty: 1,
-                ages: "18+"
-            }
-    }
+                ages: "18+",
+                registrationLink: "https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/e411fca80fdee6f46fe950c8b1088819?filter=c2VhcmNoPSZsb2NhdGlvbiU1QjE3ODA3JTVEPTEmZGF5c09mVGhlV2VlayU1QjElNUQ9MSZkYXlzT2ZUaGVXZWVrJTVCMyU1RD0x"
+        
+            },
+
+          fitnessFusion: {
+            video: 'https://res.cloudinary.com/dwzatjoyv/video/upload/v1782183938/excersie_demo_qvdxuv.mp4',
+            title: 'Fitness Fusion',
+            times: ['Tuesdays @ 1:30 pm', 'Thursdays @ 1:30 pm'],
+            location: 'Deer Lick Park',
+            description: "Get ready to fuse your fitness goals with our Fitness Fusion class! Join us every Tuesday and Thursday at 1:30 pm for a high-energy workout that combines cardio, strength training, and flexibility exercises. This class is perfect for those looking to challenge themselves and improve their overall fitness. All fitness levels are welcome!",
+            fullAddress: "Deer Lick Park, 5000 highway 166, douglasville, GA",
+            difficulty: 2,
+            ages: "18+",
+            registrationLink: "https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/d72f2e49dc877b45f5f181fc22e4c44c?filter=c2VhcmNoPUZpdG5lc3MlMjBmdXNpb24lMjAmbG9jYXRpb24lNUIyNjMlNUQ9MSZsb2NhdGlvbiU1QjE3ODA3JTVEPTE="
+        
+          }
+        }
     const { event } = useParams();
     if (!event || !events[event]) {
         return <Navigate replace to="/" />;
@@ -72,7 +89,7 @@ export default function Events() {
         <motion.a href="/" className="bg-triadic  text-white px-6 py-3 rounded-lg mt-8 inline-block font-semibold tracking-wide hover:bg-brand/90 transition-colors duration-300">
           Back 
         </motion.a>
-        <motion.a href="https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/e411fca80fdee6f46fe950c8b1088819?filter=c2VhcmNoPSZsb2NhdGlvbiU1QjE3ODA3JTVEPTEmZGF5c09mVGhlV2VlayU1QjElNUQ9MSZkYXlzT2ZUaGVXZWVrJTVCMyU1RD0x" 
+        <motion.a href={eventData.registrationLink} target="_blank" rel="noopener noreferrer"
         className="bg-triadic hover:bg-brand active:bg-active active:text-black text-white px-6 py-3 rounded-lg mt-8 inline-block font-semibold tracking-wide hover:bg-brand/90 transition-colors duration-300">
           Register 
         </motion.a>
